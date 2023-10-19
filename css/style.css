@@ -166,8 +166,7 @@ main.game{
     height: 600px;
     margin:  auto;
     background-image: url(../image/3.jpg);
-    background-position: 80px;
-    background-repeat: no-repeat;
+    background-position: 50px;
 }
 
 #gametitle{
@@ -184,12 +183,15 @@ main.game .card {
     font-size: 20px;
     position: relative;
     top: 100px;
+    height: 450px;
+    display: flex;
+
 }
 
 #btnlogin {
     position: relative;
-    top: 140px;
-    left: 420px;
+    top: 220px;
+    left: 680px;
     color: #fff;
     box-shadow: 0 0 .2rem #fff,
     0 0 .2rem #fff,
@@ -212,8 +214,13 @@ main.game .card {
 a{
     text-decoration: none;
 }
-
-main.game .card .card-body{
-    height: 300px;
-    
+.card-body {
+    text-align: center;
+    background-color: #FACFCE;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+footer#game{
+    height: 40px;
 }
