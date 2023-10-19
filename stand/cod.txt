@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Quiz de Consumo de Energia</title>
+  <style>
+    /* Estilos (mantenha os estilos do seu exemplo) */
+  </style>
+</head>
+<body>
+ <!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Quiz de Consumo de Energia</title>
+  <style>
+    /* Estilos (mantenha os estilos do seu exemplo) */
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Bem-vindo ao quiz sobre consumo de energia!</h1>
+    <p>Responda as seguintes perguntas com sinceridade:</p>
+    <div class="question">Pergunta 1: Você desliga as luzes quando sai de um cômodo?</div>
+    <div class="options">
+      <button class="option">Sim</button>
+      <button class="option">Às vezes</button>
+      <button class="option">Não</button>
+    </div>
+    <button class="next-button">Próxima Pergunta</button>
+    <div class="progress-bar">
+      <div class="progress"></div>
+    </div>
+    <div class="result">O seu score é: 0</div>
+    <div class="footer">© 2023 Quiz de Consumo de Energia</div>
+  </div>
+
+  <script>
+    // Variáveis
+    let score = 0;
+    let currentQuestion = 0;
+    const questions = [
+      "Você desliga as luzes quando sai de um cômodo?",
+      "Você utiliza lâmpadas de LED ou fluorescentes?",
+      "Você desconecta aparelhos eletrônicos quando não estão em uso?",
+      "Você utiliza aparelhos elétricos com certificação de eficiência energética?",
+      "Você usa a energia solar como fonte de energia?",
+      "Você realiza manutenção regular em sua casa para garantir eficiência energética?",
+      "Você utiliza lâmpadas de menor potência em áreas onde uma iluminação mais fraca é suficiente?",
+      // Adicione as outras perguntas aqui
+    ];
+    
+    const answers = [
+      ["Sim", "Às vezes", "Não"],
+      ["Sim", "Às vezes", "Não"],
+      ["Sim", "Às vezes", "Não"],
+      ["Sim", "Às vezes", "Não"],
+      ["Sim", "Às vezes", "Não"],
+      ["Sim", "Às vezes", "Não"],
+      ["Sim", "Às vezes", "Não"],
+      // Adicione as outras respostas aqui
+    ];
+    
+    const points = {
+      "Sim": 3,
+      "Às vezes": 2,
+      "Não": 0
+      // Defina os pontos para as outras respostas
+    };
+
+    // Elementos da interface do usuário
+    const questionElement = document.querySelector('.question');
+    const optionsList = document.querySelector('.options');
+    const optionButtons = document.querySelectorAll('.option');
+    const nextButton = document.querySelector('.next-button');
+    const progressBar = document.querySelector('.progress');
+    const resultElement = document.querySelector('.result');
+
+    optionButtons.forEach(button => {
+      button.addEventListener('click', handleAnswerClick);
+    });
+
+    function showNextQuestion() {
+      if (currentQuestion < questions.length) {
+        questionElement.textContent = `Pergunta ${currentQuestion + 1}: ${questions[currentQuestion]}`;
+        optionButtons.forEach(button => {
+          button.disabled = false;
+        });
+        currentQuestion++;
+        updateProgressBar();
+      } else {
+        showResult();
+      }
+    }
+
+    function handleAnswerClick(event) {
+      const selectedAnswer = event.target.textContent;
+      score += points[selectedAnswer];
+      optionButtons.forEach(button => {
+        button.disabled = true;
+      });
+      showNextQuestion();
+    }
+
+    function showResult() {
+      classifyUser(score);
+      nextButton.style.display = 'none';
+    }
+
+    function classifyUser(score) {
+      let classification = '';
+
+      if (score >= 0 && score <= 8) {
+        classification = "Péssimo, tem que aprender a economizar";
+      } else if (score >= 9 && score <= 16) {
+        classification = "Bom, mas precisa melhorar";
+      } else if (score >= 17 && score <= 24) {
+        classification = "Super economista";
+      } else {
+        classification = "Classificação desconhecida";
+      }
+
+      resultElement.textContent = `O seu score é: ${score}. Sua classificação é: ${classification}`;
+    }
+
+    function updateProgressBar() {
+      progressBar.style.width = `${(currentQuestion / questions.length) * 100}%`;
+    }
+
+    nextButton.addEventListener('click', showNextQuestion);
+
+    showNextQuestion();
+  </script>
+</body>
+</html>
+
+
+  <script>
+    // Variáveis
+    let score = 0;
+    let currentQuestion = 0;
+    const questions = [
+      "Você desliga as luzes quando sai de um cômodo?",
+      "Você utiliza lâmpadas de LED ou fluorescentes?",
+      "Você desconecta aparelhos eletrônicos quando não estão em uso?",
+      "Você utiliza aparelhos elétricos com certificação de eficiência energética?",
+      "Você usa a energia solar como fonte de energia?",
+      "Você realiza manutenção regular em sua casa para garantir eficiência energética?",
+      "Você utiliza lâmpadas de menor potência em áreas onde uma iluminação mais fraca é suficiente?",
+      // Adicione as outras perguntas aqui
+    ];
+    
+    const answers = [
+      ["Sim", "Às vezes", "Não"],
+      ["Sim", "Às vezes", "Não"],
+      ["Sim", "Às vezes", "Não"],
+      ["Sim", "Às vezes", "Não"],
+      ["Sim", "Às vezes", "Não"],
+      ["Sim", "Às vezes", "Não"],
+      ["Sim", "Às vezes", "Não"],
+      // Adicione as outras respostas aqui
+    ];
+    
+    const points = {
+      "Sim": 3,
+      "Às vezes": 2,
+      "Não": 0
+      // Defina os pontos para as outras respostas
+    };
+
+    // Elementos da interface do usuário
+    const questionElement = document.querySelector('.question');
+    const optionsList = document.querySelector('.options');
+    const optionButtons = document.querySelectorAll('.option');
+    const nextButton = document.querySelector('.next-button');
+    const progressBar = document.querySelector('.progress');
+    const resultElement = document.querySelector('.result');
+
+    optionButtons.forEach(button => {
+      button.addEventListener('click', handleAnswerClick);
+    });
+
+    function showNextQuestion() {
+      if (currentQuestion < questions.length) {
+        questionElement.textContent = `Pergunta ${currentQuestion + 1}: ${questions[currentQuestion]}`;
+        optionButtons.forEach(button => {
+          button.disabled = false;
+        });
+        currentQuestion++;
+        updateProgressBar();
+      } else {
+        showResult();
+      }
+    }
+
+    function handleAnswerClick(event) {
+      const selectedAnswer = event.target.textContent;
+      score += points[selectedAnswer];
+      optionButtons.forEach(button => {
+        button.disabled = true;
+      });
+      showNextQuestion();
+    }
+
+    function showResult() {
+      classifyUser(score);
+      nextButton.style.display = 'none';
+    }
+
+    function classifyUser(score) {
+      let classification = '';
+
+      if (score >= 0 && score <= 8) {
+        classification = "Péssimo, tem que aprender a economizar";
+      } else if (score >= 9 && score <= 16) {
+        classification = "Bom, mas precisa melhorar";
+      } else if (score >= 17 && score <= 24) {
+        classification = "Super economista";
+      } else {
+        classification = "Classificação desconhecida";
+      }
+
+      resultElement.textContent = `O seu score é: ${score}. Sua classificação é: ${classification}`;
+    }
+
+    function updateProgressBar() {
+      progressBar.style.width = `${(currentQuestion / questions.length) * 100}%`;
+    }
+
+    nextButton.addEventListener('click', showNextQuestion);
+
+    showNextQuestion();
+  </script>
+</body>
+</html>

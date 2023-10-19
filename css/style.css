@@ -162,12 +162,12 @@ video {
 
 main.game{
     background-color: #FACFCE;
-    width: 50%;
-    height: auto;
-    min-height: 400px;
+    width: 80%;
+    height: 600px;
     margin:  auto;
     background-image: url(../image/3.jpg);
     background-position: 80px;
+    background-repeat: no-repeat;
 }
 
 #gametitle{
@@ -211,4 +211,9 @@ main.game .card {
 }
 a{
     text-decoration: none;
+}
+
+main.game .card .card-body{
+    height: 300px;
+    
 }
