@@ -190,8 +190,8 @@ main.game .card {
 
 #btnlogin {
     position: relative;
-    top: 220px;
-    left: 680px;
+    top: 45% !important;
+    left: 45% !important;
     color: #fff;
     box-shadow: 0 0 .2rem #fff,
     0 0 .2rem #fff,
@@ -223,4 +223,25 @@ a{
 }
 footer#game{
     height: 40px;
+}
+
+
+@keyframes fireworks {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-1000px);
+    opacity: 0;
+  }
+}
+
+.firework {
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  animation: fireworks 1s ease-out;
 }

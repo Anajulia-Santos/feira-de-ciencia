@@ -2,191 +2,202 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Feira de Ciências</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <link rel="shortcut icon" href="image/icon.jpg" type="image/x-icon">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feira de Ciências</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <link rel="shortcut icon" href="image/icon.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <header>
-        <h1 id="title">FEIRA DE CIÊNCIAS</h1>
-    </header>
-    <nav class="navbar bg-body-tertiary">
-        <form class="container-fluid justify-content-start ">
-            <a href="index.html"><i class="bi bi-house-door-fill"></i></a>
-            <button type="button" class="btn btn-outline-light dropdown-toggle" data-bs-toggle="dropdown"
-                aria-expanded="true">
-                Experiências
-            </button>
-            <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="experience.html">Todas</a></li>
-                <li><a class="dropdown-item" href="expe1.html">Experiência 1</a></li>
-                <li><a class="dropdown-item" href="expe2.html">Experiência 2</a></li>
-                <li><a class="dropdown-item" href="expe3.html">Experiência 3</a></li>
-                <li><a class="dropdown-item" href="expe4.html">Experiência 4</a></li>
-                <li><a class="dropdown-item" href="expe5.html">Experiência 5</a></li>
-                <li><a class="dropdown-item" href="expe6.html">Experiência 6</a></li>
-            </ul>
-            <a href="game.html" class="btn btn-outline-light">Jogo</a>
-        </form>
-    </nav>
-    <ol class="breadcrumbList bigMargin">
-        <li itemprop="itemListElement" itemscope="" itemtype="./feira-de-ciencias">
-            <a itemprop="item" typeof="WebPage" href="index.html">
-                <span itemprop="name">
-                    <p class="route">Início</p>
-                </span>
-            </a>
-        </li>
-        <span class="breadCrumbSpace">
-            <p class="route"> &gt; </p>
+  <header>
+    <h1 id="title">FEIRA DE CIÊNCIAS</h1>
+  </header>
+  <nav class="navbar bg-body-tertiary">
+    <form class="container-fluid justify-content-start ">
+      <a href="index.html"><i class="bi bi-house-door-fill"></i></a>
+      <button type="button" class="btn btn-outline-light dropdown-toggle" data-bs-toggle="dropdown"
+        aria-expanded="true">
+        Experiências
+      </button>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="experience.html">Todas</a></li>
+        <li><a class="dropdown-item" href="expe1.html">Experiência 1</a></li>
+        <li><a class="dropdown-item" href="expe2.html">Experiência 2</a></li>
+        <li><a class="dropdown-item" href="expe3.html">Experiência 3</a></li>
+        <li><a class="dropdown-item" href="expe4.html">Experiência 4</a></li>
+        <li><a class="dropdown-item" href="expe5.html">Experiência 5</a></li>
+        <li><a class="dropdown-item" href="expe6.html">Experiência 6</a></li>
+      </ul>
+      <a href="game.html" class="btn btn-outline-light">Jogo</a>
+    </form>
+  </nav>
+  <ol class="breadcrumbList bigMargin">
+    <li itemprop="itemListElement" itemscope="" itemtype="./feira-de-ciencias">
+      <a itemprop="item" typeof="WebPage" href="index.html">
+        <span itemprop="name">
+          <p class="route">Início</p>
         </span>
-        <li itemprop="itemListElement" itemscope="" itemtype="./feira-de-ciencias">
-            <a itemprop="item" typeof="WebPage" href="game.html">
-                <span itemprop="name">
-                    <p class="route">Jogo</p>
-                </span>
-            </a>
-        </li>
-    </ol>
-    <div id="gametitle">
-        <h1>Como está sua Economia de Energia?</h1>
-    </div>
-    <main class="game">
-        <div class="card" style="width: 70%; display: none ;" id="cardbtn">
-            <div class="card-body">
-                    <h1>Bem-vindo ao quiz sobre consumo de energia!</h1>
-                    <p>Responda as seguintes perguntas com sinceridade:</p>
-                    <div class="question">Pergunta 1: Você desliga as luzes quando sai de um cômodo?</div>
-                    <div class="options" style="margin: 10px auto;">
-                      <button class="option">Sim</button>
-                      <button class="option">Às vezes</button>
-                      <button class="option">Não</button>
-                    </div>
-                    <button class="next-button" >Próxima Pergunta</button>
-                    <div class="progress-bar" style="margin: 10px auto;">
-                      <div class="progress"></div>
-                    </div>
-                    <div class="result">O seu score é: 0</div>
-                    <div class="footer">© 2023 Quiz de Consumo de Energia</div>
-                  </div>
+      </a>
+    </li>
+    <span class="breadCrumbSpace">
+      <p class="route"> &gt; </p>
+    </span>
+    <li itemprop="itemListElement" itemscope="" itemtype="./feira-de-ciencias">
+      <a itemprop="item" typeof="WebPage" href="game.html">
+        <span itemprop="name">
+          <p class="route">Jogo</p>
+        </span>
+      </a>
+    </li>
+  </ol>
+  <div id="gametitle">
+    <h1>Como está sua Economia de Energia?</h1>
+  </div>
+  <main class="game">
+    <div class="card" style="width: 70%; display: none ;" id="cardbtn">
+      <div class="card-body">
+        <h1>Bem-vindo ao quiz sobre consumo de energia!</h1>
+        <p>Responda as seguintes perguntas com sinceridade:</p>
+        <div class="question">Pergunta 1: Você desliga as luzes quando sai de um cômodo?</div>
+        <div class="options" style="margin: 10px auto;">
+          <button class="option">Sim</button>
+          <button class="option">Às vezes</button>
+          <button class="option">Não</button>
         </div>
-        <button type="button" class="btn" id="btnlogin" onclick="abrirCard()">Iniciar</button>
-        <script>
-            function abrirCard() {
-                var card = document.getElementById("cardbtn");
-                var btn = document.getElementById("btnlogin")
-                if (card.style.display === "none") {
-                    card.style.display = "flex";
-                    btn.style.display = "none";
-                }
-            }
-
-    // Variáveis
-    let score = 0;
-    let currentQuestion = 0;
-    const questions = [
-      "Você desliga as luzes quando sai de um cômodo?",
-      "Você utiliza lâmpadas de LED ou fluorescentes?",
-      "Você desconecta aparelhos eletrônicos quando não estão em uso?",
-      "Você utiliza aparelhos elétricos com certificação de eficiência energética?",
-      "Você usa a energia solar como fonte de energia?",
-      "Você realiza manutenção regular em sua casa para garantir eficiência energética?",
-      "Você utiliza lâmpadas de menor potência em áreas onde uma iluminação mais fraca é suficiente?",
-      // Adicione as outras perguntas aqui
-    ];
-    
-    const answers = [
-      ["Sim", "Às vezes", "Não"],
-      ["Sim", "Às vezes", "Não"],
-      ["Sim", "Às vezes", "Não"],
-      ["Sim", "Às vezes", "Não"],
-      ["Sim", "Às vezes", "Não"],
-      ["Sim", "Às vezes", "Não"],
-      ["Sim", "Às vezes", "Não"],
-      // Adicione as outras respostas aqui
-    ];
-    
-    const points = {
-      "Sim": 3,
-      "Às vezes": 2,
-      "Não": 0
-      // Defina os pontos para as outras respostas
-    };
-
-    // Elementos da interface do usuário
-    const questionElement = document.querySelector('.question');
-    const optionsList = document.querySelector('.options');
-    const optionButtons = document.querySelectorAll('.option');
-    const nextButton = document.querySelector('.next-button');
-    const progressBar = document.querySelector('.progress');
-    const resultElement = document.querySelector('.result');
-
-    optionButtons.forEach(button => {
-      button.addEventListener('click', handleAnswerClick);
-    });
-
-    function showNextQuestion() {
-      if (currentQuestion < questions.length) {
-        questionElement.textContent = `Pergunta ${currentQuestion + 1}: ${questions[currentQuestion]}`;
-        optionButtons.forEach(button => {
-          button.disabled = false;
-        });
-        currentQuestion++;
-        updateProgressBar();
-      } else {
-        showResult();
+        <button class="next-button">Próxima Pergunta</button>
+        <div class="progress-bar" style="margin: 10px auto;">
+          <div class="progress"></div>
+        </div>
+        <div class="result">O seu score é: 0</div>
+        <div class="footer">© 2023 Quiz de Consumo de Energia</div>
+      </div>
+    </div>
+    <button type="button" class="btn" id="btnlogin" onclick="abrirCard()">Iniciar</button>
+    <script>
+      function abrirCard() {
+        var card = document.getElementById("cardbtn");
+        var btn = document.getElementById("btnlogin")
+        if (card.style.display === "none") {
+          card.style.display = "flex";
+          btn.style.display = "none";
+        }
       }
-    }
 
-    function handleAnswerClick(event) {
-      const selectedAnswer = event.target.textContent;
-      score += points[selectedAnswer];
+      // Variáveis
+      let score = 0;
+      let currentQuestion = 0;
+      const questions = [
+        "Você desliga as luzes quando sai de um cômodo?",
+        "Você utiliza lâmpadas de LED ou fluorescentes?",
+        "Você desconecta aparelhos eletrônicos quando não estão em uso?",
+        "Você utiliza aparelhos elétricos com certificação de eficiência energética?",
+        "Você usa a energia solar como fonte de energia?",
+        "Você realiza manutenção regular em sua casa para garantir eficiência energética?",
+        "Você utiliza lâmpadas de menor potência em áreas onde uma iluminação mais fraca é suficiente?",
+        // Adicione as outras perguntas aqui
+      ];
+
+      const answers = [
+        ["Sim", "Às vezes", "Não"],
+        ["Sim", "Às vezes", "Não"],
+        ["Sim", "Às vezes", "Não"],
+        ["Sim", "Às vezes", "Não"],
+        ["Sim", "Às vezes", "Não"],
+        ["Sim", "Às vezes", "Não"],
+        ["Sim", "Às vezes", "Não"],
+        // Adicione as outras respostas aqui
+      ];
+
+      const points = {
+        "Sim": 3,
+        "Às vezes": 2,
+        "Não": 0
+        // Defina os pontos para as outras respostas
+      };
+
+      // Elementos da interface do usuário
+      const questionElement = document.querySelector('.question');
+      const optionsList = document.querySelector('.options');
+      const optionButtons = document.querySelectorAll('.option');
+      const nextButton = document.querySelector('.next-button');
+      const progressBar = document.querySelector('.progress');
+      const resultElement = document.querySelector('.result');
+
       optionButtons.forEach(button => {
-        button.disabled = true;
+        button.addEventListener('click', handleAnswerClick);
       });
-      showNextQuestion();
-    }
 
-    function showResult() {
-      classifyUser(score);
-      nextButton.style.display = 'none';
-    }
-
-    function classifyUser(score) {
-      let classification = '';
-
-      if (score >= 0 && score <= 8) {
-        classification = "Péssimo, tem que aprender a economizar";
-      } else if (score >= 9 && score <= 16) {
-        classification = "Bom, mas precisa melhorar";
-      } else if (score >= 17 && score <= 24) {
-        classification = "Super economista";
-      } else {
-        classification = "Classificação desconhecida";
+      function showNextQuestion() {
+        if (currentQuestion < questions.length) {
+          questionElement.textContent = `Pergunta ${currentQuestion + 1}: ${questions[currentQuestion]}`;
+          optionButtons.forEach(button => {
+            button.disabled = false;
+          });
+          currentQuestion++;
+          updateProgressBar();
+        } else {
+          showResult();
+        }
       }
 
-      resultElement.textContent = `O seu score é: ${score}. Sua classificação é: ${classification}`;
-    }
+      function handleAnswerClick(event) {
+        const selectedAnswer = event.target.textContent;
+        score += points[selectedAnswer];
+        optionButtons.forEach(button => {
+          button.disabled = true;
+        });
+        showNextQuestion();
+      }
 
-    function updateProgressBar() {
-      progressBar.style.width = `${(currentQuestion / questions.length) * 100}%`;
-    }
+      function showResult() {
+        classifyUser(score);
+        nextButton.style.display = 'none';
+      }
 
-    nextButton.addEventListener('click', showNextQuestion);
+      function classifyUser(score) {
+        let classification = '';
 
-    showNextQuestion();
-  </script>
-    </main>
-    <footer id="game"></footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        if (score >= 0 && score <= 8) {
+          classification = "Péssimo, tem que aprender a economizar";
+        } else if (score >= 9 && score <= 16) {
+          classification = "Bom, mas precisa melhorar";
+        } else if (score >= 17 && score <= 24) {
+          classification = "Super economista";
+          showFireworks(); // Chama a função para mostrar os fogos
+        } else {
+          classification = "Classificação desconhecida";
+        }
+
+        resultElement.textContent = `O seu score é: ${score}. Sua classificação é: ${classification}`;
+      }
+
+      function showFireworks() {
+        const gameElement = document.getElementById('game');
+        const numberOfFireworks = 10;
+
+        for (let i = 0; i < numberOfFireworks; i++) {
+          const firework = document.createElement('div');
+          firework.className = 'firework';
+          firework.style.left = `${Math.random() * window.innerWidth}px`;
+          gameElement.appendChild(firework);
+        }
+      }
+
+
+      nextButton.addEventListener('click', showNextQuestion);
+
+      showNextQuestion();
+    </script>
+  </main>
+  <footer id="game"></footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
     crossorigin="anonymous"></script>
 </body>
