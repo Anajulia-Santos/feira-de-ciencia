@@ -88,7 +88,102 @@
                     btn.style.display = "none";
                 }
             }
-        </script>
+
+    // Variáveis
+    let score = 0;
+    let currentQuestion = 0;
+    const questions = [
+      "Você desliga as luzes quando sai de um cômodo?",
+      "Você utiliza lâmpadas de LED ou fluorescentes?",
+      "Você desconecta aparelhos eletrônicos quando não estão em uso?",
+      "Você utiliza aparelhos elétricos com certificação de eficiência energética?",
+      "Você usa a energia solar como fonte de energia?",
+      "Você realiza manutenção regular em sua casa para garantir eficiência energética?",
+      "Você utiliza lâmpadas de menor potência em áreas onde uma iluminação mais fraca é suficiente?",
+      // Adicione as outras perguntas aqui
+    ];
+    
+    const answers = [
+      ["Sim", "Às vezes", "Não"],
+      ["Sim", "Às vezes", "Não"],
+      ["Sim", "Às vezes", "Não"],
+      ["Sim", "Às vezes", "Não"],
+      ["Sim", "Às vezes", "Não"],
+      ["Sim", "Às vezes", "Não"],
+      ["Sim", "Às vezes", "Não"],
+      // Adicione as outras respostas aqui
+    ];
+    
+    const points = {
+      "Sim": 3,
+      "Às vezes": 2,
+      "Não": 0
+      // Defina os pontos para as outras respostas
+    };
+
+    // Elementos da interface do usuário
+    const questionElement = document.querySelector('.question');
+    const optionsList = document.querySelector('.options');
+    const optionButtons = document.querySelectorAll('.option');
+    const nextButton = document.querySelector('.next-button');
+    const progressBar = document.querySelector('.progress');
+    const resultElement = document.querySelector('.result');
+
+    optionButtons.forEach(button => {
+      button.addEventListener('click', handleAnswerClick);
+    });
+
+    function showNextQuestion() {
+      if (currentQuestion < questions.length) {
+        questionElement.textContent = `Pergunta ${currentQuestion + 1}: ${questions[currentQuestion]}`;
+        optionButtons.forEach(button => {
+          button.disabled = false;
+        });
+        currentQuestion++;
+        updateProgressBar();
+      } else {
+        showResult();
+      }
+    }
+
+    function handleAnswerClick(event) {
+      const selectedAnswer = event.target.textContent;
+      score += points[selectedAnswer];
+      optionButtons.forEach(button => {
+        button.disabled = true;
+      });
+      showNextQuestion();
+    }
+
+    function showResult() {
+      classifyUser(score);
+      nextButton.style.display = 'none';
+    }
+
+    function classifyUser(score) {
+      let classification = '';
+
+      if (score >= 0 && score <= 8) {
+        classification = "Péssimo, tem que aprender a economizar";
+      } else if (score >= 9 && score <= 16) {
+        classification = "Bom, mas precisa melhorar";
+      } else if (score >= 17 && score <= 24) {
+        classification = "Super economista";
+      } else {
+        classification = "Classificação desconhecida";
+      }
+
+      resultElement.textContent = `O seu score é: ${score}. Sua classificação é: ${classification}`;
+    }
+
+    function updateProgressBar() {
+      progressBar.style.width = `${(currentQuestion / questions.length) * 100}%`;
+    }
+
+    nextButton.addEventListener('click', showNextQuestion);
+
+    showNextQuestion();
+  </script>
     </main>
     <footer id="game"></footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
